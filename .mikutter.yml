@@ -6,7 +6,7 @@ depends:
   - gui
   - gtk
   - settings
-version: '1.0'
+version: '0.0.1'
 author: 
 name: mikutter-user-memo
 description: "ユーザーにメモを付与するプラグイン"
