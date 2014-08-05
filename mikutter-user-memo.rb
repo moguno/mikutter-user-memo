@@ -38,14 +38,14 @@ Plugin.create(:mikutter_user_memo) {
     box = ::Gtk::HBox.new
 
     edit = ::Gtk::TextView.new
-    edit.buffer.text = Plugin[:mikutter_memo].get_memo(user[:idname])
+    edit.buffer.text = Plugin[:mikutter_user_memo].get_memo(user[:idname])
 
     button = ::Gtk::Button.new("登録")
 
     _user = user
 
     button.ssc(:clicked) {
-      Plugin[:mikutter_memo].set_memo(user[:idname], edit.buffer.text)
+      Plugin[:mikutter_user_memo].set_memo(user[:idname], edit.buffer.text)
     }
     
     box.pack_start(edit)
@@ -63,7 +63,7 @@ Plugin.create(:mikutter_user_memo) {
     def initialize(*args)
       super(*args)
 
-      @memo = Plugin[:mikutter_memo].get_memo(helper.message[:user][:idname])
+      @memo = Plugin[:mikutter_user_memo].get_memo(helper.message[:user][:idname])
     end
 
     def get_memo_layout(context = dummy_context)
