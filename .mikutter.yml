@@ -1,0 +1,12 @@
+---
+slug: :mikutter-user-memo
+depends:
+  mikutter: 3.0.3
+  plugin:
+  - gui
+  - gtk
+  - settings
+version: '1.0'
+author: 
+name: mikutter-user-memo
+description: "ユーザーにメモを付与するプラグイン"
